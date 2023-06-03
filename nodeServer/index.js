@@ -35,6 +35,6 @@ const io = new Server(server, {
 links(app);
 IO(io);
 
-server.listen(8000, () => {
+server.listen(process.env.PORT, () => {
   console.log("Server running at port 8000");
 });
