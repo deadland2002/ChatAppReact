@@ -9,6 +9,8 @@ const Requests = ({ requestList }) => {
   const [mount, setMount] = useState();
 
   const HandleAccept = async (email) => {
+    const baseUrl = import.meta.env.VITE_BASE_URL || "";
+
     if (!email) {
       return;
     } else {
@@ -16,8 +18,8 @@ const Requests = ({ requestList }) => {
         token: cookie.token,
         email: email,
       };
-      const result = await axios.post(
-        "http://localhost:8000/account/AcceptFriend",
+      const result = await axios.post(baseUrl+
+        "/account/AcceptFriend",
         data
       );
       if (result && result.data) {

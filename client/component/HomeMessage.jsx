@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { socket } from "../src/socket";
 import { useCookies } from "react-cookie";
 
@@ -6,6 +6,7 @@ const HomeMessage = ({ currMessage, userEmail , messages, setMessages , otherUse
   const [isConnected, setIsConnected] = useState(socket.connected);
   const [cookie, setCookie, removeCookie] = useCookies(["token"]);
   const [value, setValue] = useState("");
+  const myDivRef = useRef(null);
 
   useEffect(() => {
     function onConnect() {
@@ -35,12 +36,21 @@ const HomeMessage = ({ currMessage, userEmail , messages, setMessages , otherUse
     };
   }, []);
 
+
+  useEffect(()=>{
+    if (myDivRef.current) {
+      myDivRef.current.scrollTop = myDivRef.current.scrollHeight;
+    }
+  },[messages]);
+
   const HandleChange = (e) => {
     setValue(e.target.value);
   };
 
   const HandleSubmit = (e) => {
+    e.preventDefault();
     socket.emit("send message", cookie.token, value);
+    setValue("");
   };
 
   return (
@@ -52,7 +62,7 @@ const HomeMessage = ({ currMessage, userEmail , messages, setMessages , otherUse
             {/* <span>{otherUser.email}</span> */}
           </div>
         </div>
-        <div className="messageWindow">
+        <div className="messageWindow" ref={myDivRef}>
           {Object.keys(messages).map((key) => {
             return (
               <>
@@ -76,10 +86,10 @@ const HomeMessage = ({ currMessage, userEmail , messages, setMessages , otherUse
             );
           })}
         </div>
-        <div className="inputDiv">
-          <input type="text" onChange={HandleChange} />
-          <button onClick={HandleSubmit}>click</button>
-        </div>
+        <form className="inputDiv" onSubmit={HandleSubmit}>
+          <input type="text" onChange={HandleChange} value={value} required/>
+          <button >click</button>
+        </form>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ const AddUser = ({token}) => {
     const [mount,setMount] = useState();
     const imgWrapper = useRef();
     const [value,setValue] = useState("");
+    const baseUrl = import.meta.env.VITE_BASE_URL || "";
 
     const HandleAdd = async (e) =>{
         if(value.length<10){
@@ -15,7 +16,7 @@ const AddUser = ({token}) => {
                 token : token,
                 email : value
             }
-            const result = await axios.post("http://localhost:8000/account/addfriend",data);
+            const result = await axios.post(baseUrl+"/account/addfriend",data);
             if(result && result.data){
                 if(!result.data.error){
                     setValue("");

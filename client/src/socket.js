@@ -1,3 +1,5 @@
-import { useState } from 'react';
+import dotenv from "dotenv"
 import io from 'socket.io-client';
-export const socket = io('http://localhost:8000',{autoConnect: false});
+
+const socketUrl = import.meta.env.VITE_BASE_URL || "/"
+export const socket = io(socketUrl,{autoConnect: false});

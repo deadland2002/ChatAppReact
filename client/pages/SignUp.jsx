@@ -10,6 +10,7 @@ const SignUp = () => {
   const errorRef = useRef();
   const successRef = useRef();
   const router = useNavigate();
+  const baseUrl = import.meta.env.VITE_BASE_URL || "";
 
   const HandleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +21,7 @@ const SignUp = () => {
     successRef.current.classList.add("loading");
     errorRef.current.innerText = "";
     
-    const response = await axios.post("http://localhost:8000/SignUp", values);
+    const response = await axios.post(baseUrl+"/SignUp", values);
     await new Promise((res, rej) => {
       setTimeout(() => {
         res();

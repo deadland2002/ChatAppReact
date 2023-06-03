@@ -12,8 +12,10 @@ import { socket } from "../src/socket";
 
 const Home = () => {
   const [cookie, setCookie, removeCookie] = useCookies(["token"]);
+  const baseUrl = import.meta.env.VITE_BASE_URL || "";
+
   const { isLoading, error, data } = useQuery("FetchHome", async () => {
-    const result = await axios.post("http://localhost:8000/account/getdata", {
+    const result = await axios.post(baseUrl+"/account/getdata", {
       token: cookie.token,
     });
     return result.data;

@@ -213,6 +213,9 @@
                     .messageWrapper{
                         width: 100%;
                         display: grid;
+                        &:last-child{
+                            padding-bottom: 20px;
+                        }
                         
                         .container{
                             width: fit-content;

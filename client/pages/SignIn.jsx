@@ -15,6 +15,8 @@ const SignIn = () => {
   const successRef = useRef();
   const router = useNavigate();
 
+  const baseUrl = import.meta.env.VITE_BASE_URL || "";
+
   const HandleChange = (e) => {
     const { name, value } = e.target;
     setValues((prev) => ({ ...prev, [name]: value }));
@@ -24,7 +26,7 @@ const SignIn = () => {
     e.preventDefault();
     successRef.current.classList.add("loading");
     
-    const response = await axios.post("http://localhost:8000/SignIn", values);
+    const response = await axios.post(baseUrl+"/SignIn", values);
     
     await new Promise((res, rej) => {
       setTimeout(() => {
