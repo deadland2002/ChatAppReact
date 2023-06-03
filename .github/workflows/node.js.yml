@@ -1,15 +1,12 @@
-name: run server node
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
-  pull_request:
-    branches:
-      - main  # Change this to your main branch name
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18
+          node-version: 14
 
       - name: Install client dependencies
         run: cd client && npm i
@@ -30,8 +27,8 @@ jobs:
       - name: Build Node.js app
         run: npm run build
 
-      - name: Start Node.js server
-        run: npm start &
-
-      - name: Wait for server to start
-        run: sleep 10s
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.2
+        with:
+          branch: gh-pages
+          folder: dist
