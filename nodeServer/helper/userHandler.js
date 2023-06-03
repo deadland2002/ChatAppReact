@@ -53,7 +53,7 @@ const UserValidate = {
         const result = await UserSchema.findOne({ email: email });
 
 
-        if (result && userObj.email) {
+        if (email && userObj.email) {
           return res.status(200).json({
             message: "Cannot send to self",
             error: true,
