@@ -25,7 +25,7 @@ jobs:
         run: cd client && npm i
         
       - name: Install sever dependencies
-        run: cd client && npm i
+        run: cd nodeServer && npm i
 
       - name: Build Node.js app
         run: npm run build
