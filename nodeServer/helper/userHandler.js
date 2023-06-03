@@ -52,8 +52,8 @@ const UserValidate = {
         const userObj = await JWT.verify(token, SECRET);
         const result = await UserSchema.findOne({ email: email });
 
-
-        if (email && userObj.email) {
+        console.log(email , userObj.email);
+        if (email == userObj.email) {
           return res.status(200).json({
             message: "Cannot send to self",
             error: true,
