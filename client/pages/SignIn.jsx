@@ -45,15 +45,12 @@ const SignIn = () => {
       });
 
       router("/");
-      console.log("ok");
-
     } else if (response.data) {
       errorRef.current.innerText = response.data.message;
     } else {
       errorRef.current.innerText = "error occured";
     }
     successRef.current.classList.remove("loading");
-    console.log(response);
   };
   return (
     <div className="SignInParent">

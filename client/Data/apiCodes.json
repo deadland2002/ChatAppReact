@@ -1,0 +1,380 @@
+{
+    "100":{
+        "BackgroundColor":"#171717",
+        "Description":"Continue",
+        "state":"INFORMATION",
+        "Color":"white"
+    },
+    "101":{
+        "BackgroundColor":"#171717",
+        "Description":"Switching protocols",
+        "state":"INFORMATION",
+        "Color":"white"
+    },
+    "102":{
+        "BackgroundColor":"#171717",
+        "Description":"Processing",
+        "state":"INFORMATION",
+        "Color":"white"
+    },
+    "103":{
+        "BackgroundColor":"#171717",
+        "Description":"Early Hints",
+        "state":"INFORMATION",
+        "Color":"white"
+    },
+    "200":{
+        "BackgroundColor":"#63d540",
+        "Description":"OK",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "201":{
+        "BackgroundColor":"#63d540",
+        "Description":"Created",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "202":{
+        "BackgroundColor":"#63d540",
+        "Description":"Accepted",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "203":{
+        "BackgroundColor":"#63d540",
+        "Description":"Non-Authoritative Information",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "204":{
+        "BackgroundColor":"#63d540",
+        "Description":"No Content",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "205":{
+        "BackgroundColor":"#63d540",
+        "Description":"Reset Content",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "206":{
+        "BackgroundColor":"#63d540",
+        "Description":"Partial Content",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "207":{
+        "BackgroundColor":"#63d540",
+        "Description":"Multi-Status",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "208":{
+        "BackgroundColor":"#63d540",
+        "Description":"Already Reported",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "226":{
+        "BackgroundColor":"#63d540",
+        "Description":"IM Used",
+        "state":"SUCCESS",
+        "Color":"#000000"
+    },
+    "300":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Multiple Choices",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "301":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Moved Permanently",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "302":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Found",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "303":{
+        "BackgroundColor":"#ddf700",
+        "Description":"See Other",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "304":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Not Modified",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "305":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Use Proxy",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "306":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Switch Proxy",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "307":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Temporary Redirect",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "308":{
+        "BackgroundColor":"#ddf700",
+        "Description":"Permanent Redirect",
+        "state":"REDIRECT",
+        "Color":"#000000"
+    },
+    "400":{
+        "BackgroundColor":"#891c12",
+        "Description":"Bad Request",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "401":{
+        "BackgroundColor":"#891c12",
+        "Description":"Unauthorized",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "402":{
+        "BackgroundColor":"#891c12",
+        "Description":"Payment Required",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "403":{
+        "BackgroundColor":"#891c12",
+        "Description":"Forbidden",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "404":{
+        "BackgroundColor":"#891c12",
+        "Description":"Not Found",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "405":{
+        "BackgroundColor":"#891c12",
+        "Description":"Method Not Allowed",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "406":{
+        "BackgroundColor":"#891c12",
+        "Description":"Not Acceptable",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "407":{
+        "BackgroundColor":"#891c12",
+        "Description":"Proxy Authentication Required",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "408":{
+        "BackgroundColor":"#891c12",
+        "Description":"Request Timeout",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "409":{
+        "BackgroundColor":"#891c12",
+        "Description":"Conflict",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "410":{
+        "BackgroundColor":"#891c12",
+        "Description":"Gone",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "411":{
+        "BackgroundColor":"#891c12",
+        "Description":"Length Required",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "412":{
+        "BackgroundColor":"#891c12",
+        "Description":"Precondition Failed",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "413":{
+        "BackgroundColor":"#891c12",
+        "Description":"Payload Too Large",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "414":{
+        "BackgroundColor":"#891c12",
+        "Description":"URI Too Long",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "415":{
+        "BackgroundColor":"#891c12",
+        "Description":"Unsupported Media Type",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "416":{
+        "BackgroundColor":"#891c12",
+        "Description":"Range Not Satisfiable",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "417":{
+        "BackgroundColor":"#891c12",
+        "Description":"Expectation Failed",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "418":{
+        "BackgroundColor":"#891c12",
+        "Description":"I'm a Teapot",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "421":{
+        "BackgroundColor":"#891c12",
+        "Description":"Misdirected Request",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "422":{
+        "BackgroundColor":"#891c12",
+        "Description":"Unprocessable Entity",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "423":{
+        "BackgroundColor":"#891c12",
+        "Description":"Locked",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "424":{
+        "BackgroundColor":"#891c12",
+        "Description":"Failed Dependency",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "425":{
+        "BackgroundColor":"#891c12",
+        "Description":"Too Early",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "426":{
+        "BackgroundColor":"#891c12",
+        "Description":"Upgrade Required",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "428":{
+        "BackgroundColor":"#891c12",
+        "Description":"Precondition Required",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "429":{
+        "BackgroundColor":"#891c12",
+        "Description":"Too Many Requests",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "431":{
+        "BackgroundColor":"#891c12",
+        "Description":"Request Header Fields Too Large",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "451":{
+        "BackgroundColor":"#891c12",
+        "Description":"Unavailable For Legal Reasons",
+        "state":"ERROR",
+        "Color":"#ffffff"
+    },
+    "500":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Internal Server Error",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "501":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Not Implemented",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "502":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Bad Gateway",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "503":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Service Unavailable",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "504":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Gateway Timeout",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "505":{
+        "BackgroundColor":"#023E8A",
+        "Description":"HTTP Version Not Supported",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "506":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Variant Also Negotiates",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "507":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Insufficient Storage",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "508":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Loop Detected",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "510":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Not Extended",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    },
+    "511":{
+        "BackgroundColor":"#023E8A",
+        "Description":"Network Authentication Required",
+        "state":"SERVER-ERROR",
+        "Color":"white"
+    }
+}

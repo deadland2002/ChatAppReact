@@ -42,7 +42,6 @@ const SignUp = () => {
       errorRef.current.innerText = "error occured";
     }
     successRef.current.classList.remove("loading");
-    console.log(response);
   };
   return (
     <div className="SignUpParent">

@@ -19,9 +19,9 @@ app.use(express.static("../client/dist"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.get("/", function (req, res) {
-//   res.sendFile("../client/dist/index.html");
-// });
+app.get("/", function (req, res) {
+  res.sendFile("../client/dist/index.html");
+});
 
 const io = new Server(server, {
   cors: {
