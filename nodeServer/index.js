@@ -36,5 +36,5 @@ links(app);
 IO(io);
 
 server.listen(process.env.PORT, () => {
-  console.log("Server running at port 8000");
+  console.log(`Server running at port ${process.env.PORT}`);
 });
