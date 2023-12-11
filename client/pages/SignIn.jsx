@@ -22,34 +22,39 @@ const SignIn = () => {
     setValues((prev) => ({ ...prev, [name]: value }));
   };
   const HandleSubmit = async (e) => {
-    
+
     e.preventDefault();
     successRef.current.classList.add("loading");
-    
-    const response = await axios.post(baseUrl+"/SignIn", values);
-    
-    await new Promise((res, rej) => {
-      setTimeout(() => {
-        res();
-      }, 1000);
-    });
-    
-    if (response.data && !response.data.error) {
-      successRef.current.classList.remove("loading");
-      successRef.current.classList.add("success");
-      setToken(response.data.message);
-      setCookie("token",response.data.message);
-      
+
+    try{
+      const response = await axios.post(baseUrl+"/SignIn", values);
+
       await new Promise((res, rej) => {
         setTimeout(() => {
           res();
         }, 1000);
       });
 
-      router("/");
-    } else if (response.data) {
-      errorRef.current.innerText = response.data.message;
-    } else {
+      if (response.data && !response.data.error) {
+        successRef.current.classList.remove("loading");
+        successRef.current.classList.add("success");
+        setToken(response.data.message);
+        setCookie("token",response.data.message);
+
+        await new Promise((res, rej) => {
+          setTimeout(() => {
+            res();
+          }, 1000);
+        });
+
+        router("/");
+      } else if (response.data) {
+        errorRef.current.innerText = response.data.message;
+      } else {
+        errorRef.current.innerText = "error occured";
+      }
+    }catch(e){
+      console.log(e);
       errorRef.current.innerText = "error occured";
     }
     successRef.current.classList.remove("loading");

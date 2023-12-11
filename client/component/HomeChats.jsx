@@ -9,7 +9,7 @@ const HomeChats = ({ friendList , setCurrMessage, setMessages , setOtherUser }) 
     setMessages({});
   }
   return (
-    <div className="leftParent">
+    <div className="leftParent h-full">
       <div className="wrapper">
         <ul className="chatNames">{friendList.map((single,index) => {
           return(

@@ -14,7 +14,7 @@ const Home = () => {
   const [cookie, setCookie, removeCookie] = useCookies(["token"]);
   const baseUrl = import.meta.env.VITE_BASE_URL || "";
 
-  const { isLoading, error, data } = useQuery("FetchHome", async () => {
+  const { isLoading, error, data , refetch } = useQuery("FetchHome", async () => {
     const result = await axios.post(baseUrl+"/account/getdata", {
       token: cookie.token,
     });
@@ -33,8 +33,14 @@ const Home = () => {
   }, [cookie.token, router]);
 
   useEffect(() => {
+    let interval;
     if (!data?.error) {
       socket.connect();
+      interval = setInterval(()=>{refetch()},5000);
+    }
+
+    return () =>{
+      clearInterval(interval);
     }
   }, [data]);
 
@@ -47,7 +53,7 @@ const Home = () => {
 
   return (
     <div className="HomeParent">
-      <div className="header">
+      <div className="header border-b-2 border-white">
         <HomeHeader
           requestList={data.message.requests}
           username={data.message.username}
@@ -60,13 +66,16 @@ const Home = () => {
           setMessages={setMessages}
           setOtherUser={setOtherUser}
         />
-        <HomeMessage
-          currMessage={currMessage}
-          userEmail={data.message.email}
-          messages={messages}
-          setMessages={setMessages}
-          otherUser = {otherUser}
-        />
+        {
+          otherUser.name ? (<HomeMessage
+            currMessage={currMessage}
+            userEmail={data.message.email}
+            messages={messages}
+            setMessages={setMessages}
+            otherUser={otherUser}
+        />) :
+              (<div></div>)
+        }
       </div>
     </div>
   );

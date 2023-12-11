@@ -73,12 +73,14 @@ const HomeMessage = ({ currMessage, userEmail , messages, setMessages , otherUse
                     }`}
                   >
                     <div className="message" key={`${key}_message`}>{messages[key].message}</div>
-                    <div className="date" key={`${key}_date`}>
-                      Date : {String(messages[key].date).split("T")[0]}
-                    </div>
-                    <div className="time" key={`${key}_time`}>
-                      Time :{" "}
-                      {String(messages[key].date).split("T")[1].split(".")[0]}
+                    <div className={'dateTimeWrapper'}>
+                      <div className="date" key={`${key}_date`}>
+                        Date : {String(messages[key].date).split("T")[0]}
+                      </div>
+                      <div className="time" key={`${key}_time`}>
+                        Time :{" "}
+                        {String(messages[key].date).split("T")[1].split(".")[0]}
+                      </div>
                     </div>
                   </div>
                 </div>
